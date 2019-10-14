@@ -24,7 +24,12 @@ require(__DIR__.'/../../../config.php');
 
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url(new moodle_url('/admin/tool/vuejsdemo/index.php'));
-$PAGE->requires->js_call_amd('tool_vuejsdemo/demo', 'init');
+
+$PAGE->requires->css('/admin/tool/vuejsdemo/css/materialdesignicons.min.css');
+$PAGE->requires->css('/admin/tool/vuejsdemo/css/vuetify.min.css');
+
+$params = ['title' => get_string('pluginname', 'tool_vuejsdemo')];
+$PAGE->requires->js_call_amd('tool_vuejsdemo/demo', 'init', $params);
 
 echo $OUTPUT->header();
 echo $OUTPUT->render_from_template('tool_vuejsdemo/app', []);

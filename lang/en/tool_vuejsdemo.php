@@ -25,4 +25,4 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Vue.js Demo';
+$string['pluginname'] = 'Vue + Vuetify Demo';
